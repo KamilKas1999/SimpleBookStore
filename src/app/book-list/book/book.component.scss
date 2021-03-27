@@ -1,0 +1,53 @@
+.Book {
+  margin: 10px;
+  border: 1px solid black;
+  width: 500px;
+  min-height: 300px;
+  padding: 10px;
+  position: relative;
+  background-color: #eee;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  div {
+    display: flex;
+    width: 100%;
+    img {
+      width: 150px;
+      height: 250px;
+      position: absolute;
+      bottom:0;
+      left: 0;
+    }
+    div {
+      text-align: center;
+      align-items: center;
+      display: block;
+      width: 350px;
+      margin-left: 150px;
+    }
+    h1,
+    h2,
+    h3 {
+      margin: 5px;
+    }
+    .Buttons {
+      position: absolute;
+      bottom: 0;
+      right: 0px;
+      button {
+        background-color: #e6b489;
+        border: none;
+        cursor: pointer;
+        height: 30px;
+        width: 100px;
+        border-radius: 10px;
+        margin: 20px;
+        transition: 200ms linear;
+        &:hover{
+          background-color:#E68989;
+        }
+      }
+    }
+  }
+}

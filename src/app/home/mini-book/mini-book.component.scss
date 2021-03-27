@@ -1,0 +1,33 @@
+.Book{
+    display: flex;
+    margin: 30px;
+    border: 1px solid black;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    position: relative;
+    width: 400px;
+    background-color: #eee;
+    img{
+        width: 150px;
+        height: 250px;
+    }
+    div{
+        padding: 10px;
+    }
+    button{
+        background-color: #E6B489;
+        border: none;
+        cursor: pointer;
+        height:  30px;
+        width: 100px;
+        border-radius: 10px;
+        position: absolute;
+        bottom:20px;
+        right: 70px;
+        transition: 200ms linear;
+        &:hover{
+          background-color:#E68989;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<div *ngIf="book" class="Book">
+  <img src="{{ book.coverLink }}" />
+  <div>
+    <h4>{{ book.name }}</h4>
+    <p>{{book.author.name}} {{book.author.surname}}</p>
+    <button>See more</button>
+  </div>
+</div>

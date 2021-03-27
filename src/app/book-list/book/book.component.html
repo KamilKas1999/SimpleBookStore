@@ -1,0 +1,22 @@
+<div class="Book">
+    
+    <h1 *ngIf="book">{{book.name}}</h1>
+    <div>
+        <img src = {{book.coverLink}}/>
+        <div>
+            <h2>{{book.author.surname}}</h2>
+            <h3>{{book.author.name}}</h3>
+            <p>{{book.genre.name}}</p>
+            <p>{{book.published}}</p>
+            <div class="Buttons">
+                <button>Read more</button>
+                <button>To basket</button>
+            </div>
+
+            
+        </div>
+    
+    </div>
+   
+</div>
+

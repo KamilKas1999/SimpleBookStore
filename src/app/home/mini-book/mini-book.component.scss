@@ -7,7 +7,7 @@
     text-align: center;
     position: relative;
     width: 400px;
-    background-color: #eee;
+    background-color: #B4D0D9;
     img{
         width: 150px;
         height: 250px;
@@ -16,7 +16,7 @@
         padding: 10px;
     }
     button{
-        background-color: #E6B489;
+        background-color: #587399;
         border: none;
         cursor: pointer;
         height:  30px;
@@ -27,7 +27,7 @@
         right: 70px;
         transition: 200ms linear;
         &:hover{
-          background-color:#E68989;
+          background-color:#FFC8BE;
         }
     }
 }

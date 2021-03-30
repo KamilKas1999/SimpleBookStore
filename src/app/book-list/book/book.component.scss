@@ -5,7 +5,7 @@
   min-height: 300px;
   padding: 10px;
   position: relative;
-  background-color: #eee;
+  background-color: #B4D0D9;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -15,16 +15,12 @@
     img {
       width: 150px;
       height: 250px;
-      position: absolute;
-      bottom:0;
-      left: 0;
     }
     div {
       text-align: center;
       align-items: center;
       display: block;
       width: 350px;
-      margin-left: 150px;
     }
     h1,
     h2,
@@ -36,7 +32,7 @@
       bottom: 0;
       right: 0px;
       button {
-        background-color: #e6b489;
+        background-color: #587399;
         border: none;
         cursor: pointer;
         height: 30px;
@@ -45,7 +41,7 @@
         margin: 20px;
         transition: 200ms linear;
         &:hover{
-          background-color:#E68989;
+          background-color:#FFC8BE;
         }
       }
     }

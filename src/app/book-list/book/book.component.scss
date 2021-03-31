@@ -1,14 +1,9 @@
 .Book {
   margin: 10px;
   border: 1px solid black;
-  width: 500px;
-  min-height: 300px;
-  padding: 10px;
-  position: relative;
-  background-color: #B4D0D9;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  width: 450px;
+  min-height: 400px;
+  padding: 5px;
   div {
     display: flex;
     width: 100%;
@@ -20,7 +15,7 @@
       text-align: center;
       align-items: center;
       display: block;
-      width: 350px;
+      width: 300px;
     }
     h1,
     h2,
@@ -28,11 +23,10 @@
       margin: 5px;
     }
     .Buttons {
-      position: absolute;
-      bottom: 0;
-      right: 0px;
+ 
+     
       button {
-        background-color: #587399;
+        background-color: #FC7838;
         border: none;
         cursor: pointer;
         height: 30px;
@@ -41,9 +35,13 @@
         margin: 20px;
         transition: 200ms linear;
         &:hover{
-          background-color:#FFC8BE;
+          background-color:#EA804D;
         }
       }
     }
   }
+}
+
+.Price{
+  color: #FF5300;
 }

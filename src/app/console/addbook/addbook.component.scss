@@ -2,6 +2,10 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    div{
+        width: 300px
+    }
 }
 
 .group{
@@ -16,7 +20,7 @@
         width: 200px;
         &:focus{
             border: none;
-            border-bottom: 2px solid rgb(158, 61, 61);
+            border-bottom: 2px solid #fc7838;
             outline: none;
         }
     }
@@ -29,10 +33,11 @@ button{
     font-size: 15px;
     border: 1px solid black;
     transition: 200ms ease-out;
+    background-color: #FF651B;
     &:disabled{
-        background-color: rgb(185, 112, 112);
+        background-color: #3F384C;
     }
     &:hover:enabled{
-        background-color: rgb(185, 147, 112);
+        background-color: #EA804D;
     }
 }

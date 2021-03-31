@@ -1,0 +1,17 @@
+.Console{
+    display: flex;
+}
+
+.ControlPanel{
+    height: 100vh;
+    background-color: #3F384C;
+    width: 150px;
+    text-align: center;
+
+    a{
+        display: block;
+        color: #FFFFFF;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+}

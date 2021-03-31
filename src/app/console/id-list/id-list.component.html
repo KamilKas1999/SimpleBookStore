@@ -1,0 +1,24 @@
+<!-- Books list -->
+<button (click)="onBook()">{{books ? "Hide" : "Show"}} book list</button>
+<div class="Books" *ngIf="books">
+  <div *ngFor="let book of books" class="Element">{{ book.id }}. {{ book.name }}</div>
+</div>
+<!-- Authors list -->
+<button (click)="onAuthor()">{{authors ? "Hide" : "Show"}} author list</button>
+<div class="Authors" *ngIf="authors">
+  <div *ngFor="let author of authors" class="Element">
+    {{ author.id }}. {{ author.surname }}, {{ author.name }}
+  </div>
+</div>
+<!-- Genre list -->
+<button (click)="onGenre()">{{genres ? "Hide" : "Show"}} genre list</button>
+<div class="Genres" *ngIf="genres">
+    <div *ngFor="let genre of genres" class="Element">{{ genre.id }}. {{ genre.name }}</div>
+</div>
+<!-- Types list -->
+<button (click)="onType()">{{types ? "Hide" : "Show"}} type list</button>
+<div class="Types" *ngIf="types">
+    <div *ngFor="let type of types" class="Element">{{ type.id }}. {{ type.name }}</div>
+</div>
+
+

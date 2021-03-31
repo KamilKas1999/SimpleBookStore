@@ -1,8 +1,9 @@
 <div *ngIf="book" class="Book">
   <img src="{{ book.coverLink }}" />
   <div>
+    <p class="Price">{{book.price}}$</p>
     <h4>{{ book.name }}</h4>
     <p>{{book.author.name}} {{book.author.surname}}</p>
-    <button>See more</button>
+    <button>Read more</button>
   </div>
 </div>

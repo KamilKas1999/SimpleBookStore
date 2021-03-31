@@ -1,4 +1,5 @@
 export class Book {
+  id : number;
   name: string;
   coverLink: string;
   published: string;

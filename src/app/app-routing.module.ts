@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookListComponent } from './book-list/book-list.component';
 import { AddbookComponent } from './console/addbook/addbook.component';
 import { ConsoleComponent } from './console/console.component';
+import { IdListComponent } from './console/id-list/id-list.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -12,18 +13,19 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'console',
     component: ConsoleComponent,
-    children:[
+    children: [
       {
         path: 'addbook',
-        component: AddbookComponent
-      }
-    ]
-  }
+        component: AddbookComponent,
+      },
+      { path: 'idList', component: IdListComponent },
+    ],
+  },
 ];
 
 @NgModule({

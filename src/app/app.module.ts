@@ -14,6 +14,7 @@ import { MiniBookComponent } from './home/mini-book/mini-book.component';
 import { ConsoleComponent } from './console/console.component';
 import { AddbookComponent } from './console/addbook/addbook.component';
 import { FormsModule, NgForm } from '@angular/forms';
+import { IdListComponent } from './console/id-list/id-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule, NgForm } from '@angular/forms';
     HomeComponent,
     MiniBookComponent,
     ConsoleComponent,
-    AddbookComponent
+    AddbookComponent,
+    IdListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthorizeComponent } from './authorize/authorize.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { AddbookComponent } from './console/addbook/addbook.component';
 import { ConsoleComponent } from './console/console.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
       { path: 'idList', component: IdListComponent },
     ],
   },
+  {
+    path: 'login',
+    component: AuthorizeComponent
+  }
 ];
 
 @NgModule({

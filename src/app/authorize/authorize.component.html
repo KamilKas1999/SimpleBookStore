@@ -1,0 +1,77 @@
+<div class="Authorize">
+  <div>
+    <h1>Please login, to fully experience</h1>
+
+    <form #authorizeForm="ngForm">
+      <label for="username">Name</label>
+      <input
+        type="name"
+        name="username"
+        id="username"
+        placeholder="username"
+        ngModel
+        required
+      />
+
+      <label for="password">Surname</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        ngModel
+        required
+      />
+
+      <button
+        [disabled]="!authorizeForm.valid"
+        (click)="onLogin(authorizeForm)"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+
+  <div>
+    <h1>You're here first time?</h1>
+
+    <form #authorizeForm="ngForm">
+      <label for="username">Name</label>
+      <input
+        type="name"
+        name="username"
+        id="username"
+        placeholder="username"
+        ngModel
+        required
+      />
+
+      <label for="password">Surname</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        ngModel
+        required
+      />
+
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email"
+        ngModel
+        required
+      />
+
+      <button
+        [disabled]="!authorizeForm.valid"
+        (click)="onRegister(authorizeForm)"
+      >
+        Register
+      </button>
+    </form>
+  </div>
+</div>

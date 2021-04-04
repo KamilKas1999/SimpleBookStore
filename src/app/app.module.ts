@@ -19,6 +19,8 @@ import { AuthorizeComponent } from './authorize/authorize.component';
 import { ElementComponent } from './element/element.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { AuthorComponent } from './authors/author/author.component';
+import { RemoveComponent } from './console/remove/remove.component';
+import { UpdateComponent } from './console/update/update.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AuthorComponent } from './authors/author/author.component';
     AuthorizeComponent,
     ElementComponent,
     AuthorsComponent,
-    AuthorComponent
+    AuthorComponent,
+    RemoveComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

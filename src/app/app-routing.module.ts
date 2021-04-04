@@ -6,6 +6,8 @@ import { BookListComponent } from './book-list/book-list.component';
 import { AddbookComponent } from './console/addbook/addbook.component';
 import { ConsoleComponent } from './console/console.component';
 import { IdListComponent } from './console/id-list/id-list.component';
+import { RemoveComponent } from './console/remove/remove.component';
+import { UpdateComponent } from './console/update/update.component';
 import { ElementComponent } from './element/element.component';
 import { HomeComponent } from './home/home.component';
 
@@ -27,20 +29,22 @@ const routes: Routes = [
         component: AddbookComponent,
       },
       { path: 'idList', component: IdListComponent },
+      {path : 'remove', component: RemoveComponent},
+      {path : 'update', component: UpdateComponent},
     ],
   },
   {
     path: 'login',
-    component: AuthorizeComponent
+    component: AuthorizeComponent,
   },
   {
     path: 'element/:id',
-    component: ElementComponent
+    component: ElementComponent,
   },
   {
     path: 'authors',
-    component: AuthorsComponent
-  }
+    component: AuthorsComponent,
+  },
 ];
 
 @NgModule({

@@ -56,6 +56,14 @@ export class ConsoleService {
     );
   }
 
+  remove(what: string, id:number){
+    this.http.delete(`${environment.apiUrl}/${what}/${id}`).subscribe(()=>{
+      alert("Removed!")
+    },err =>{
+      alert("Error")
+    })
+  }
+
   getBooks(){
     return this.http.get<Book[]>(`${environment.apiUrl}/books`);
   }

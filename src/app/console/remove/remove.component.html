@@ -1,0 +1,12 @@
+<div>
+  <form #removeForm="ngForm" (ngSubmit)="onRemove(removeForm)">
+    <input type="number" name="id" ngModel required placeholder="Id" />
+    <select id="toDelete" name="toDelete" ngModel required>
+      <option value="books">Book</option>
+      <option value="authors">Author</option>
+      <option value="types">Genre</option>
+      <option value="genres">Type</option>
+    </select>
+    <button type="submit" [disabled]="!removeForm.valid">Remove</button>
+  </form>
+</div>

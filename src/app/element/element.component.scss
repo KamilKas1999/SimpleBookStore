@@ -1,0 +1,52 @@
+.Element{
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.Book{
+    display: flex; 
+    max-height: 400px;
+    div{
+        padding: 0 10px; 
+        overflow-y: auto;
+    }
+    img{
+      width: 250px;
+      height: 400px;
+    }
+}
+
+.Price{
+    color: #FF5300;
+}
+
+.Line{
+    width: 90%;
+    background-color: black;
+    height: 1px;
+    overflow-y:hidden;
+}
+
+.Buttons {
+ width: 90%;
+ display: flex;
+ justify-content: center;
+ margin: auto;
+ align-items: center;
+     
+    button {
+      background-color: #FC7838;
+      border: none;
+      cursor: pointer;
+      height: 30px;
+      width: 100px;
+      border-radius: 10px;
+      margin: 20px;
+      transition: 200ms linear;
+      &:hover{
+        background-color:#EA804D;
+      }
+    }
+  }

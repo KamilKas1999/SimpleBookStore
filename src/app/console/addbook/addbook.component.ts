@@ -22,6 +22,7 @@ export class AddbookComponent implements OnInit {
       id: null,
       name: form.value.authorName,
       surname: form.value.authorSurname,
+      books: null
     };
     this.consoleService.addAuthor(author);
   }

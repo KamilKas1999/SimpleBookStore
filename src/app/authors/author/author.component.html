@@ -1,0 +1,10 @@
+<div class="Author">
+  <h2>{{ author.surname }}</h2>
+  <h3>{{ author.name }}</h3>
+  <div class="Books" *ngIf="author.books.length > 0">
+    <app-mini-book
+      *ngFor="let book of author.books"
+      [book]="book"
+    ></app-mini-book>
+  </div>
+</div>

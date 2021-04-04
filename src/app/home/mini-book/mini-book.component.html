@@ -3,7 +3,7 @@
   <div>
     <p class="Price">{{book.price}}$</p>
     <h4>{{ book.name }}</h4>
-    <p>{{book.author.name}} {{book.author.surname}}</p>
-    <button>Read more</button>
+    <p *ngIf="book.author">{{book.author.name}} {{book.author.surname}}</p>
+    <button (click) = "onReadMore()"><a>Read more</a></button>
   </div>
 </div>

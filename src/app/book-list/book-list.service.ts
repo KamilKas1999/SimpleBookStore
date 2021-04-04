@@ -17,7 +17,6 @@ export class BookListService {
     this.http.get<Book[]>(`${environment.apiUrl}/books`).subscribe(data => {
       this.books = data;
       this.booksChanged.next(this.books);
-
     })
   }
 

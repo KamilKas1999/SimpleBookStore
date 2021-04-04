@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Book } from 'src/app/shared/models/book.model';
 
 @Component({
@@ -9,10 +10,15 @@ import { Book } from 'src/app/shared/models/book.model';
 export class MiniBookComponent implements OnInit {
 
   @Input() book: Book;
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
     console.log(this.book);
+  }
+
+  onReadMore(){
+    console.log(this.book.id)
+    this.router.navigate([`element/${this.book.id}`])
   }
 
 }

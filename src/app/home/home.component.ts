@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Book } from '../shared/models/book.model';
 import { HomeService } from './home.service';
 
@@ -7,16 +8,22 @@ import { HomeService } from './home.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   books: Book[] = [];
+  private subscribe: Subscription;
   constructor(private homeService : HomeService) { }
+
 
   ngOnInit(): void {
     this.homeService.getBooks();
-    this.homeService.booksChanged.subscribe(data => {
+    this.subscribe = this.homeService.booksChanged.subscribe(data => {
       this.books = data;
     })
+  }
+
+  ngOnDestroy(): void {
+    this.subscribe.unsubscribe();
   }
 
 }

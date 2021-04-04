@@ -2,7 +2,7 @@
   <div>
     <h1>Please login, to fully experience</h1>
 
-    <form #authorizeForm="ngForm">
+    <form #loginForm="ngForm">
       <label for="username">Name</label>
       <input
         type="name"
@@ -24,8 +24,8 @@
       />
 
       <button
-        [disabled]="!authorizeForm.valid"
-        (click)="onLogin(authorizeForm)"
+        [disabled]="!loginForm.valid"
+        (click)="onLogin(loginForm)"
       >
         Login
       </button>
@@ -35,7 +35,7 @@
   <div>
     <h1>You're here first time?</h1>
 
-    <form #authorizeForm="ngForm">
+    <form #registerForm="ngForm">
       <label for="username">Name</label>
       <input
         type="name"
@@ -67,8 +67,8 @@
       />
 
       <button
-        [disabled]="!authorizeForm.valid"
-        (click)="onRegister(authorizeForm)"
+        [disabled]="!registerForm.valid"
+        (click)="onRegister(registerForm)"
       >
         Register
       </button>

@@ -1,7 +1,7 @@
 .Book {
   margin: 10px;
   border: 1px solid black;
-  width: 450px;
+  width: 500px;
   min-height: 400px;
   padding: 5px;
   div {
@@ -10,6 +10,7 @@
     img {
       width: 150px;
       height: 250px;
+      border: 1px solid black;
     }
     div {
       text-align: center;
@@ -44,4 +45,9 @@
 
 .Price{
   color: #FF5300;
+}
+
+a{
+  text-decoration: none;
+  color:black;
 }

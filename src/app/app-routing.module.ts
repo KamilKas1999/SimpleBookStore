@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthorizeComponent } from './authorize/authorize.component';
+import { AuthorsComponent } from './authors/authors.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { AddbookComponent } from './console/addbook/addbook.component';
 import { ConsoleComponent } from './console/console.component';
 import { IdListComponent } from './console/id-list/id-list.component';
+import { ElementComponent } from './element/element.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -30,6 +32,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: AuthorizeComponent
+  },
+  {
+    path: 'element/:id',
+    component: ElementComponent
+  },
+  {
+    path: 'authors',
+    component: AuthorsComponent
   }
 ];
 

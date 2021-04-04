@@ -4,6 +4,7 @@ export class Book {
   coverLink: string;
   published: string;
   price: number;
+  description: string;
   author: {
     name: string;
     surname: string;

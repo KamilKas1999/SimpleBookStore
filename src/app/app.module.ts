@@ -16,6 +16,9 @@ import { AddbookComponent } from './console/addbook/addbook.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { IdListComponent } from './console/id-list/id-list.component';
 import { AuthorizeComponent } from './authorize/authorize.component';
+import { ElementComponent } from './element/element.component';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorComponent } from './authors/author/author.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { AuthorizeComponent } from './authorize/authorize.component';
     ConsoleComponent,
     AddbookComponent,
     IdListComponent,
-    AuthorizeComponent
+    AuthorizeComponent,
+    ElementComponent,
+    AuthorsComponent,
+    AuthorComponent
   ],
   imports: [
     BrowserModule,

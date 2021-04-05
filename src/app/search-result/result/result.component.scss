@@ -1,0 +1,29 @@
+.Result{
+    width: 70%;
+    margin: auto;
+    border : 1px solid black;
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+    img{
+        height: 100px;
+    }
+    div{
+        padding-left: 10px;
+    }
+    button{
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+        background-color: #FC7838;
+        border: none;
+        cursor: pointer;
+        height:  30px;
+        width: 100px;
+        border-radius: 10px;
+        transition: 200ms linear;
+        &:hover{
+          background-color:#EA804D;
+        }
+    }
+}

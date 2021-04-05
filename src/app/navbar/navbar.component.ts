@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthorizeService } from '../authorize/authorize.service';
 
 @Component({
@@ -8,7 +10,10 @@ import { AuthorizeService } from '../authorize/authorize.service';
 })
 export class NavbarComponent implements OnInit {
   isLogin = false;
-  constructor(private authorizeService: AuthorizeService) {}
+  constructor(
+    private authorizeService: AuthorizeService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     if (this.isLogin) {
@@ -16,5 +21,9 @@ export class NavbarComponent implements OnInit {
     } else {
       this.authorizeService.user.subscribe((login) => (this.isLogin = login));
     }
+  }
+
+  onSearch(form: NgForm) {
+    this.router.navigate([`/search/${form.value.text}`]);
   }
 }

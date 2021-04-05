@@ -1,5 +1,6 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { BasketService } from 'src/app/basket/basket.service';
 
 @Component({
   selector: 'app-navbar-item',
@@ -9,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarItemComponent implements OnInit {
   @Input() value: string;
   @Input() link: string;
-  constructor() {}
+  amount: number = 0;
+  constructor(private basketService: BasketService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if ((this.value === 'Basket')) {
+      this.basketService.booksChanged.subscribe((data) => {
+        this.amount = data.length;
+      });
+    }
+  }
 }

@@ -17,7 +17,6 @@ export class MiniBookComponent implements OnInit {
   }
 
   onReadMore(){
-    console.log(this.book.id)
     this.router.navigate([`element/${this.book.id}`])
   }
 

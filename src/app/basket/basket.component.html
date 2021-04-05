@@ -1,0 +1,7 @@
+
+<div class="Basket" *ngIf="books">
+    <app-basket-element *ngFor="let book of books, let i = index" [book] = "book" [index] = "i"></app-basket-element>
+    <p *ngIf="price > 0">Total price: {{price}}$</p>
+    <p *ngIf = "books.length == 0">Basket is empty :(</p>
+</div>
+

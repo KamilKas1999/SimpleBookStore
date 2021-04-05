@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Book } from '../shared/models/book.model';
 import { environment } from '../../environments/environment';
+import { BasketService } from '../basket/basket.service';
 
 @Component({
   selector: 'app-element',
@@ -13,7 +14,7 @@ export class ElementComponent implements OnInit {
   id: number;
   book: Book;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private route: ActivatedRoute, private http: HttpClient,  private basketService: BasketService) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
@@ -25,5 +26,9 @@ export class ElementComponent implements OnInit {
           console.log(this.book);
         });
     });
+  }
+
+  onAdd(){
+    this.basketService.add(this.book);
   }
 }

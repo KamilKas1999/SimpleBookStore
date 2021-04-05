@@ -1,3 +1,7 @@
 <div class="NavbarItem">
-    <a routerLink={{link}}>{{value}}</a>
+    <div class="Amount" *ngIf="value === 'Basket'">
+        {{ amount }}
+      </div>
+
+  <a routerLink="{{ link }}">{{ value }}</a>
 </div>

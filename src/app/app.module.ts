@@ -21,6 +21,11 @@ import { AuthorsComponent } from './authors/authors.component';
 import { AuthorComponent } from './authors/author/author.component';
 import { RemoveComponent } from './console/remove/remove.component';
 import { UpdateComponent } from './console/update/update.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { ResultComponent } from './search-result/result/result.component';
+import { FooterComponent } from './footer/footer.component';
+import { BasketComponent } from './basket/basket.component';
+import { BasketElementComponent } from './basket/basket-element/basket-element.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { UpdateComponent } from './console/update/update.component';
     AuthorsComponent,
     AuthorComponent,
     RemoveComponent,
-    UpdateComponent
+    UpdateComponent,
+    SearchResultComponent,
+    ResultComponent,
+    FooterComponent,
+    BasketComponent,
+    BasketElementComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthorizeComponent } from './authorize/authorize.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { BasketComponent } from './basket/basket.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { AddbookComponent } from './console/addbook/addbook.component';
 import { ConsoleComponent } from './console/console.component';
@@ -10,6 +11,7 @@ import { RemoveComponent } from './console/remove/remove.component';
 import { UpdateComponent } from './console/update/update.component';
 import { ElementComponent } from './element/element.component';
 import { HomeComponent } from './home/home.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const routes: Routes = [
   {
@@ -45,6 +47,14 @@ const routes: Routes = [
     path: 'authors',
     component: AuthorsComponent,
   },
+  {
+    path: 'search/:searchedBook',
+    component: SearchResultComponent
+  },
+  {
+    path: 'basket',
+    component: BasketComponent
+  }
 ];
 
 @NgModule({

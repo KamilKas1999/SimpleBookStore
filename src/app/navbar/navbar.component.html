@@ -1,17 +1,33 @@
-<div class="Logo">
-<h4><a routerLink="/">SimpleBookStore</a></h4>
-</div>
-<div class="Navbar">
-  <div class="Left">
-    <app-navbar-item link = '/books' value = "Books"></app-navbar-item>
-    <span>|</span>
-    <app-navbar-item link = '/authors' value = "Authors"></app-navbar-item>
+<nav>
+  <div class="Logo">
+    <h4><a routerLink="/">SimpleBookStore</a></h4>
   </div>
-  <input type="test"/>
-  <button>Search</button>
-  <div class="Rigth">
-    <app-navbar-item link = '/login' [value] = "isLogin ? 'Logout' : 'Login'"></app-navbar-item>
-    <span *ngIf="isLogin" >|</span>
-    <app-navbar-item *ngIf="isLogin" link = '/console' value = "Console"></app-navbar-item>
-</div>
-</div>
+  <div class="Navbar">
+    <div class="Left">
+      <app-navbar-item link="/books" value="Books"></app-navbar-item>
+      <span>|</span>
+      <app-navbar-item link="/authors" value="Authors"></app-navbar-item>
+    </div>
+    <form #searchForm="ngForm" (ngSubmit)="onSearch(searchForm)">
+      <input type="text" name="text" required ngModel />
+      <button [disabled]="!searchForm.valid">Search</button>
+    </form>
+    <div class="Rigth">
+      <app-navbar-item
+        link="/login"
+        [value]="isLogin ? 'Logout' : 'Login'"
+      ></app-navbar-item>
+      <span *ngIf="isLogin">|</span>
+      <app-navbar-item
+        *ngIf="isLogin"
+        link="/console"
+        value="Console"
+      ></app-navbar-item>
+      <span>|</span>
+      <app-navbar-item
+        link="/basket"
+        value="Basket"
+      ></app-navbar-item>
+    </div>
+  </div>
+</nav>

@@ -13,12 +13,17 @@ export class AuthorizeComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogin(form: NgForm) {
-    const username = form.value.username;
+    const email = form.value.email;
     const password = form.value.password;
-    this.authorizeService.login(username, password);
+    this.authorizeService.login(email, password);
   }
 
   onRegister(form: NgForm) {
-    console.log(form);
+    const email = form.value.email;
+    const password = form.value.password;
+    const name = form.value.name;
+    const surname = form.value.surname;
+    this.authorizeService.register(email,password,name,surname);  
+    form.reset();
   }
 }

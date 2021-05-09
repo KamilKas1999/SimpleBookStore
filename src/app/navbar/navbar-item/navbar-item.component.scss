@@ -7,7 +7,7 @@
   font-size: 20px;
   padding: 10px 30px;
   transition: 200ms linear;
-  position: relative;
+  //position: relative;
   &:hover {
     background-color:#EA804D;
     
@@ -30,6 +30,17 @@
   width: 25px;
 }
 
-// .NavbarItem:hover{
-//     background-color: black;
-// }
+@media screen and (max-width:1000px) {
+  .NavbarItem{
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 20px 10px;
+    padding: 0;
+    margin: 0;
+    transition: none;
+  }
+  .Amount{
+    display: none;
+  }
+}

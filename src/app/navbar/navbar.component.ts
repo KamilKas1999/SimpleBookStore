@@ -9,7 +9,7 @@ import { AuthorizeService } from '../authorize/authorize.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  isLogin = false;
+  isLogin = null;
   constructor(
     private authorizeService: AuthorizeService,
     private router: Router
@@ -25,5 +25,14 @@ export class NavbarComponent implements OnInit {
 
   onSearch(form: NgForm) {
     this.router.navigate([`/search/${form.value.text}`]);
+  }
+
+  onLogout() {
+    if (this.isLogin) {
+      this.authorizeService.logout();
+      this.router.navigate(['/']);
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 }

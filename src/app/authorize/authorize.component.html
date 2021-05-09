@@ -3,17 +3,17 @@
     <h1>Please login, to fully experience</h1>
 
     <form #loginForm="ngForm">
-      <label for="username">Name</label>
+      <label for="username">Email</label>
       <input
-        type="name"
-        name="username"
+        type="text"
+        name="email"
         id="username"
         placeholder="username"
         ngModel
         required
       />
 
-      <label for="password">Surname</label>
+      <label for="password">Password</label>
       <input
         type="password"
         name="password"
@@ -38,30 +38,40 @@
     <form #registerForm="ngForm">
       <label for="username">Name</label>
       <input
-        type="name"
-        name="username"
-        id="username"
-        placeholder="username"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="name"
         ngModel
         required
       />
 
-      <label for="password">Surname</label>
+      <label for="email">Surname</label>
+      <input
+        type="text"
+        name="surname"
+        id="surname"
+        placeholder="surname"
+        ngModel
+        required
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="email"
+        ngModel
+        required
+      />
+
+      <label for="password">Password</label>
       <input
         type="password"
         name="password"
         id="password"
         placeholder="Password"
-        ngModel
-        required
-      />
-
-      <label for="email">E-mail</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="email"
         ngModel
         required
       />

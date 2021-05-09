@@ -5,7 +5,7 @@
   <div class="Navbar">
     <div class="Left">
       <app-navbar-item link="/books" value="Books"></app-navbar-item>
-      <span>|</span>
+
       <app-navbar-item link="/authors" value="Authors"></app-navbar-item>
     </div>
     <form #searchForm="ngForm" (ngSubmit)="onSearch(searchForm)">
@@ -14,20 +14,23 @@
     </form>
     <div class="Rigth">
       <app-navbar-item
-        link="/login"
+        (click)="onLogout()"
         [value]="isLogin ? 'Logout' : 'Login'"
       ></app-navbar-item>
-      <span *ngIf="isLogin">|</span>
+
       <app-navbar-item
         *ngIf="isLogin"
         link="/console"
         value="Console"
       ></app-navbar-item>
-      <span>|</span>
+      
       <app-navbar-item
-        link="/basket"
-        value="Basket"
+        *ngIf="isLogin"
+        link="/console"
+        value="User"
       ></app-navbar-item>
+
+      <app-navbar-item link="/basket" value="Basket"></app-navbar-item>
     </div>
   </div>
 </nav>

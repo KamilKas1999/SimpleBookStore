@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname + '/dist/Bookstore'));
+app.use(express.static(__dirname + '/dist/BookStore'));
 
 app.get('/*', (req,res,next) => {
-    res.sendFile(path.join(__dirname + '/dist/Bookstore/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/BookStore/index.html'));
 });
 
 

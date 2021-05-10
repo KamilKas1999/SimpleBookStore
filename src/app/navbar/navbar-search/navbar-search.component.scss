@@ -1,0 +1,42 @@
+.SearchPanel{
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+  input {
+    height: 32px;
+  
+    margin-left: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  button {
+    height: 35px;
+    background-color: #fc7838;
+    border: none;
+    cursor: pointer;
+    transition: 200ms linear;
+    &:hover {
+      background-color: #ea804d;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .SearchPanel{
+      display: block;
+      width: 80vw;
+      margin: auto;
+      margin-bottom: 20px;
+      input{
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+      button{
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+}

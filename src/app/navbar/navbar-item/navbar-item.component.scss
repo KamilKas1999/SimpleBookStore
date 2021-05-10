@@ -1,46 +1,88 @@
-.NavbarItem {
-  height: 100%;
+// .NavbarItem {
+//   height: 100%;
 
-  width: auto;
+//   width: auto;
+//   text-align: center;
+//   display: table;
+//   font-size: 20px;
+//   padding: 10px 30px;
+//   transition: 200ms linear;
+//   //position: relative;
+//   &:hover {
+//     background-color:#EA804D;
+
+//   }
+//   a {
+//     text-decoration: none;
+//     color: black;
+//   }
+
+// }
+// .Amount{
+//   position: absolute;
+//   background-color: white;
+//   color: EA804D;
+//   top:5px;
+//   right: 5px;
+//   border-color: 1px solid black;
+//   border-radius: 100%;
+//   height: 25px;
+//   width: 25px;
+// }
+
+// @media screen and (max-width:1000px) {
+//   .NavbarItem{
+//     height: auto;
+//     width: 100%;
+//     display: block;
+//     margin: 20px 10px;
+//     padding: 0;
+//     margin: 0;
+//     transition: none;
+//   }
+//   .Amount{
+//     display: none;
+//   }
+// }
+
+.NavbarItem {
+  width: 100px;
   text-align: center;
-  display: table;
-  font-size: 20px;
-  padding: 10px 30px;
+  position: relative;
+  height: 50px;
   transition: 200ms linear;
-  //position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  font-size: 20px;
   &:hover {
-    background-color:#EA804D;
-    
+    background-color: #ea804d;
   }
   a {
     text-decoration: none;
-    color: black;
+    color: white;
   }
-
 }
-.Amount{
+
+.Amount {
   position: absolute;
-  background-color: white;
-  color: EA804D;
-  top:5px;
-  right: 5px;
-  border-color: 1px solid black;
+  color: black;
+  display: table-cell;
+  vertical-align: middle;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
   border-radius: 100%;
-  height: 25px;
-  width: 25px;
+  background-color: white;
 }
 
-@media screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   .NavbarItem{
-    height: auto;
-    width: 100%;
-    display: block;
-    margin: 20px 10px;
-    padding: 0;
-    margin: 0;
-    transition: none;
+    width: 100vw;
   }
   .Amount{
-    display: none;
+    right: 100px;
   }
 }

@@ -1,70 +1,116 @@
-.Logo{
+// .Logo{
+//   width: 100%;
+//   text-align: center;
+// }
+// .Navbar {
+//   background-color: #3F384C;
+//   width: 100%;
+//   height: 80px;
+//   display: flex;
+//   color: black;
+//   position: sticky;
+//   top: 0;
+//   z-index: 100;
+//   border-bottom: 1px solid black;
+//   .Rigth {
+//     position: absolute;
+//     right: 0px;
+//     background-color: #FC7838;
+//     height: 50px;
+//     margin-top: 15px;
+//     border-radius: 10px;
+//     margin-right: 20px;
+//     display: flex;
+//   }
+//   .Left{
+//     background-color: #FC7838;
+//     height: 50px;
+//     margin-top: 15px;
+//     border-radius: 10px;
+//     margin-left:15px;
+//     display: flex;
+//   }
+//   input {
+//     height: 32px;
+//     margin-top: 20px;
+//     margin-left: 30px;
+//     border: none;
+//     border-bottom: 1px solid black;
+//   }
+//   button {
+//     height: 35px;
+//     margin-top: 20px;
+//     background-color: #FC7838;
+//     border: none;
+//     cursor: pointer;
+//     transition: 200ms linear;
+//     &:hover{
+
+//       background-color:#EA804D;
+
+//     }
+//   }
+// }
+
+// @media screen and (max-width:1000px) {
+//   .Navbar{
+//     display: block;
+//     position: static;
+//     height: auto;
+//     width: 100%;
+//     .Rigth, .Left{
+//       margin: auto;
+//       display: block;
+//       position: static;
+//       height: auto;
+//       width: 80%;
+//     }
+//   }
+
+// }
+.Logo {
   width: 100%;
   text-align: center;
 }
 .Navbar {
-  background-color: #3F384C;
   width: 100%;
-  height: 80px;
   display: flex;
-  color: black;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid black;
-  .Rigth {
-    position: absolute;
-    right: 0px;
-    background-color: #FC7838;
-    height: 50px;
-    margin-top: 15px;
-    border-radius: 10px;
-    margin-right: 20px;
-    display: flex;
-  }
-  .Left{
-    background-color: #FC7838;
-    height: 50px;
-    margin-top: 15px;
-    border-radius: 10px;
-    margin-left:15px;
-    display: flex;
-  }
-  input {
-    height: 32px;
-    margin-top: 20px;
-    margin-left: 30px;
-    border: none;
-    border-bottom: 1px solid black;
-  }
-  button {
-    height: 35px;
-    margin-top: 20px;
-    background-color: #FC7838;
-    border: none;
-    cursor: pointer;
-    transition: 200ms linear;
-    &:hover{
-
-      background-color:#EA804D;
-
-    }
-  }
+  background-color: #3f384c;
+  height: 50px;
 }
 
-@media screen and (max-width:1000px) {
-  .Navbar{
+@media only screen and (max-width: 1000px) {
+  .Navbar {
     display: block;
-    position: static;
-    height: auto;
-    width: 100%;
-    .Rigth, .Left{
-      margin: auto;
-      display: block;
-      position: static;
-      height: auto;
-      width: 80%;
-    }
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
   }
 
+  .OpenButton{
+    position: fixed;
+    top:20px;
+    right:20px;
+    transition: 200ms ease-out;
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    div{
+      background-color: black;
+      width: 20px;
+      height: 5px;
+      margin: 10px;
+    }
+  }
+  .Close {
+    transition: 500ms ease-out;
+    transform: translateX(-100%);
+  }
+
+  .Open {
+    transition: 500ms ease-out;
+    transform: translateX(0);
+  }
 }

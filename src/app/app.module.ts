@@ -26,6 +26,7 @@ import { ResultComponent } from './search-result/result/result.component';
 import { FooterComponent } from './footer/footer.component';
 import { BasketComponent } from './basket/basket.component';
 import { BasketElementComponent } from './basket/basket-element/basket-element.component';
+import { NavbarSearchComponent } from './navbar/navbar-search/navbar-search.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { BasketElementComponent } from './basket/basket-element/basket-element.c
     ResultComponent,
     FooterComponent,
     BasketComponent,
-    BasketElementComponent
+    BasketElementComponent,
+    NavbarSearchComponent
   ],
   imports: [
     BrowserModule,

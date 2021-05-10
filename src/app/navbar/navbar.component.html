@@ -1,7 +1,43 @@
+<div class="Logo">
+  <h4><a routerLink="/">SimpleBookStore</a></h4>
+</div>
 <nav>
-  <div class="Logo">
-    <h4><a routerLink="/">SimpleBookStore</a></h4>
+  <div class="OpenButton" (click) = "openButton()">
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
+  <div class="Navbar" [ngClass] = "isOpen ? 'Open' : 'Close'" >
+    <app-navbar-search></app-navbar-search>
+
+    <div class="NavbarItems" (click) = "openButton()">
+      <app-navbar-item link="/books" value="Books"></app-navbar-item>
+  
+      <app-navbar-item link="/authors" value="Authors"></app-navbar-item>
+      <app-navbar-item
+        (click)="onLogout()"
+        [value]="isLogin ? 'Logout' : 'Login'"
+      ></app-navbar-item>
+    
+      <app-navbar-item
+        *ngIf="isLogin"
+        link="/console"
+        value="Console"
+      ></app-navbar-item>
+    
+      <app-navbar-item
+        *ngIf="isLogin"
+        link="/console"
+        value="User"
+      ></app-navbar-item>
+    
+      <app-navbar-item link="/basket" value="Basket"></app-navbar-item>
+    </div>
+    
+  </div>
+
+
+  <!-- 
   <div class="Navbar">
     <div class="Left">
       <app-navbar-item link="/books" value="Books"></app-navbar-item>
@@ -32,5 +68,5 @@
 
       <app-navbar-item link="/basket" value="Basket"></app-navbar-item>
     </div>
-  </div>
+  </div> -->
 </nav>

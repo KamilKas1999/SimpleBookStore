@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { User } from '../shared/models/user.model';
+import {environment} from '../../environments/environment'
 
 export interface loginResponse {
   user: User;
@@ -18,7 +19,7 @@ export class AuthorizeService {
 
   login(email: string, password: string) {
     this.http
-      .post<loginResponse>('http://localhost:8080/auth/signin', {
+      .post<loginResponse>(`${environment.apiUrl}/auth/signin`, {
         email: email,
         password: password,
       })
@@ -35,7 +36,7 @@ export class AuthorizeService {
 
   register(email: string, password: string, name: string, surname: string) {
     this.http
-      .post<loginResponse>('http://localhost:8080/auth/signup', {
+      .post<loginResponse>(`${environment.apiUrl}/auth/signup`, {
         email: email,
         password: password,
         name: name,

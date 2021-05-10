@@ -10,6 +10,7 @@ import { AuthorizeService } from '../authorize/authorize.service';
 })
 export class NavbarComponent implements OnInit {
   isLogin = null;
+  isOpen = false;
   constructor(
     private authorizeService: AuthorizeService,
     private router: Router
@@ -23,9 +24,11 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  onSearch(form: NgForm) {
-    this.router.navigate([`/search/${form.value.text}`]);
+  openButton() {
+    this.isOpen = !this.isOpen;
   }
+
+
 
   onLogout() {
     if (this.isLogin) {

@@ -24,10 +24,8 @@
       margin: 5px;
     }
     .Buttons {
- 
-     
       button {
-        background-color: #FC7838;
+        background-color: #fc7838;
         border: none;
         cursor: pointer;
         height: 30px;
@@ -35,19 +33,31 @@
         border-radius: 10px;
         margin: 20px;
         transition: 200ms linear;
-        &:hover{
-          background-color:#EA804D;
+        &:hover {
+          background-color: #ea804d;
         }
       }
     }
   }
 }
 
-.Price{
-  color: #FF5300;
+.Price {
+  color: #ff5300;
 }
 
-a{
+a {
   text-decoration: none;
-  color:black;
+  color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Book {
+    width: 90%;
+    margin: auto;
+    div {
+      div {
+        width: 100%;
+      }
+    }
+  }
 }
